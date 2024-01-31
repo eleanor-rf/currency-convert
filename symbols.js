@@ -170,3 +170,5 @@ const symbols = {
   "ZMW": "Zambian Kwacha",
   "ZWL": "Zimbabwean Dollar"
 }
+
+module.exports = symbols;

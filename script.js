@@ -1,4 +1,5 @@
 const fs = require("fs/promises");
+const symbols = require("./symbols.js")
 
 const fetchKey = async () => {
   try {
@@ -25,10 +26,6 @@ const requestOptions = {
   redirect: "follow",
 };
 
-const from = "GBP";
-const to = "USD";
-const amount = 55.0;
-
 const convertCurrency = async (to, from, amount) => {
   try {
     const headers = await createHeaders();
@@ -43,8 +40,6 @@ const convertCurrency = async (to, from, amount) => {
     console.log(error);
   }
 };
-
-convertCurrency(to, from, amount);
 
 const getSymbols = async () => {
   try {
